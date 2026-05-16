@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Basit Shots Streaming</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#111;
+    box-shadow:0 0 15px rgba(0,0,0,0.8);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-circle{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00bfff,#0077ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:18px;
+    box-shadow:0 0 15px #00bfff;
+}
+
+.logo h1{
+    font-size:24px;
+    color:#00bfff;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    font-size:16px;
+}
+
+.nav-links a:hover{
+    color:#00bfff;
+}
+
+.login-btn{
+    background:#00bfff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.login-btn:hover{
+    background:#008cff;
+    transform:scale(1.05);
+}
+
+/* HERO SECTION */
+.hero{
+    height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    padding:20px;
+}
+
+.hero-content h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#00bfff;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.7;
+    color:#ddd;
+}
+
+.watch-btn{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#00bfff;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.watch-btn:hover{
+    background:#008cff;
+    transform:translateY(-5px);
+}
+
+/* VIDEOS SECTION */
+.section-title{
+    padding:40px;
+    font-size:32px;
+    color:#00bfff;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:0 40px 50px;
+}
+
+.video-card{
+    background:#161616;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.3s;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.video-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(0,191,255,0.4);
+}
+
+.video-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.video-info{
+    padding:15px;
+}
+
+.video-info h3{
+    margin-bottom:10px;
+}
+
+.video-info p{
+    color:#bbb;
+    font-size:14px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    padding:30px;
+    text-align:center;
+    color:#aaa;
+}
+
+.social-icons{
+    margin-top:15px;
+}
+
+.social-icons i{
+    margin:0 10px;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icons i:hover{
+    color:#00bfff;
+}
+
+@media(max-width:768px){
+    .hero-content h2{
+        font-size:40px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <div class="logo-circle">BS</div>
+        <h1>BASIT SHOTS</h1>
+    </div>
+
+    <div class="nav-links">
+        <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#"><i class="fa-solid fa-film"></i> Videos</a>
+        <a href="#"><i class="fa-solid fa-music"></i> Music</a>
+        <a href="#"><i class="fa-solid fa-user"></i> Creators</a>
+    </div>
+
+    <button class="login-btn">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+    </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Welcome to <span>Basit Shots</span></h2>
+        <p>
+            Stream creative videos, music visuals, cinematic edits,
+            and premium entertainment in one powerful platform.
+        </p>
+
+        <button class="watch-btn">
+            <i class="fa-solid fa-play"></i> Start Watching
+        </button>
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<h2 class="section-title">Trending Videos</h2>
+
+<div class="video-grid">
+
+    <div class="video-card">
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+        <div class="video-info">
+            <h3>Cinematic Edit</h3>
+            <p>Experience professional visuals from Basit Shots.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop">
+        <div class="video-info">
+            <h3>Studio Sessions</h3>
+            <p>Behind the scenes recording moments.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+        <div class="video-info">
+            <h3>Live Performance</h3>
+            <p>Watch exclusive concert footage and edits.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h3>BASIT SHOTS STREAMING</h3>
+    <p>Dark themed video streaming platform.</p>
+
+    <div class="social-icons">
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-facebook"></i>
+    </div>
+</footer>
+
+</body>
+</html>
